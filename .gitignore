@@ -1,6 +1,4 @@
-*.pro
-*.s#*
-*.b#*
-.~lock.*
-*.lck
-*.job
+.pio
+.pioenvs
+.piolibdeps
+.vscode/
