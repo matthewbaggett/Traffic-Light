@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.0.1">
+<eagle version="9.4.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -64,6 +64,7 @@
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
 <layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
+<layer number="58" name="tCAD" color="7" fill="1" visible="no" active="no"/>
 <layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="88" name="SimResults" color="9" fill="1" visible="no" active="no"/>
@@ -95,7 +96,10 @@
 <layer number="114" name="Badge_Outline" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="115" name="ReferenceISLANDS" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="116" name="Patch_BOT" color="9" fill="4" visible="yes" active="yes"/>
+<layer number="117" name="BACKMAAT1" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="118" name="Rect_Pads" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="119" name="KAP_TEKEN" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="120" name="120" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="121" name="_tsilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="122" name="_bsilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="123" name="tTestmark" color="7" fill="1" visible="yes" active="yes"/>
@@ -105,9 +109,12 @@
 <layer number="127" name="_tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="128" name="_bValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="129" name="Mask" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="130" name="SMDSTROOK" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="131" name="tAdjust" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="132" name="bAdjust" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="133" name="bottom_silk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="144" name="Drill_legend" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="145" name="DrillLegend_01-16" color="2" fill="9" visible="no" active="yes"/>
 <layer number="150" name="Notes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="151" name="HeatSink" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="152" name="_bDocu" color="7" fill="1" visible="yes" active="yes"/>
@@ -399,6 +406,9 @@ at 30/07/2012 17:45:58</description>
 <param name="checkRestrict" value="0"/>
 <param name="checkStop" value="0"/>
 <param name="checkValues" value="0"/>
+<param name="checkNames" value="1"/>
+<param name="checkWireStubs" value="1"/>
+<param name="checkPolygonWidth" value="0"/>
 <param name="useDiameter" value="13"/>
 <param name="maxErrors" value="50"/>
 </designrules>
@@ -499,23 +509,37 @@ at 30/07/2012 17:45:58</description>
 </pass>
 </autorouter>
 <elements>
-<element name="C1" library="SparkFun-Capacitors" package="EIA3528" value="47uF" x="10" y="15">
+<element name="C1" library="SparkFun-Capacitors" package="EIA3528" value="47uF" x="10" y="15" smashed="yes">
+<attribute name="NAME" x="10" y="16.778" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-08310" x="10" y="15" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="10" y="13.222" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
-<element name="C2" library="SparkFun-Capacitors" package="EIA3528" value="47uF" x="10" y="3">
+<element name="C2" library="SparkFun-Capacitors" package="EIA3528" value="47uF" x="10" y="3" smashed="yes">
+<attribute name="NAME" x="10" y="4.778" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-08310" x="10" y="3" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="10" y="1.222" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
-<element name="J1" library="SparkFun-Connectors" package="USB-B-MICRO-SMD" value="" x="1.5" y="9">
+<element name="J1" library="SparkFun-Connectors" package="USB-B-MICRO-SMD" value="" x="1.5" y="9" smashed="yes">
+<attribute name="NAME" x="0.23" y="13.699" size="0.6096" layer="25" font="vector" ratio="20"/>
 <attribute name="PROD_ID" value="CONN-11752" x="1.5" y="9" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="0.23" y="4.301" size="0.6096" layer="27" font="vector" ratio="20" align="top-left"/>
 </element>
-<element name="PAD1" library="wirepad" library_urn="urn:adsk.eagle:library:412" package="SMD2,54-5,08" package3d_urn="urn:adsk.eagle:package:30841/1" value="" x="16.51" y="13.97" rot="R90"/>
-<element name="PAD2" library="wirepad" library_urn="urn:adsk.eagle:library:412" package="SMD2,54-5,08" package3d_urn="urn:adsk.eagle:package:30841/1" value="" x="16.51" y="5.08" rot="R90"/>
-<element name="U1" library="Texas Instruments_By_element14_Batch_1" package="SOT230P700X180-4N" value="REG1117-3.3" x="10" y="9">
+<element name="PAD1" library="wirepad" library_urn="urn:adsk.eagle:library:412" package="SMD2,54-5,08" package3d_urn="urn:adsk.eagle:package:30841/1" value="" x="16.51" y="13.97" smashed="yes" rot="R90">
+<attribute name="NAME" x="19.01" y="12.47" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="16.51" y="13.97" size="0.0254" layer="27" rot="R90"/>
+</element>
+<element name="PAD2" library="wirepad" library_urn="urn:adsk.eagle:library:412" package="SMD2,54-5,08" package3d_urn="urn:adsk.eagle:package:30841/1" value="" x="16.51" y="5.08" smashed="yes" rot="R90">
+<attribute name="NAME" x="19.01" y="3.58" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="16.51" y="5.08" size="0.0254" layer="27" rot="R90"/>
+</element>
+<element name="U1" library="Texas Instruments_By_element14_Batch_1" package="SOT230P700X180-4N" value="REG1117-3.3" x="10" y="9" smashed="yes">
 <attribute name="MPN" value="REG1117-3.3" x="10" y="9" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="5.1994" y="12.556" size="2.0828" layer="25" ratio="10" rot="SR0"/>
 <attribute name="OC_FARNELL" value="1212355" x="10" y="9" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="35C1963" x="10" y="9" size="1.778" layer="27" display="off"/>
 <attribute name="PACKAGE" value="SOT-223-4" x="10" y="9" size="1.778" layer="27" display="off"/>
 <attribute name="SUPPLIER" value="Texas Instruments" x="10" y="9" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="4.285" y="3.1326" size="2.0828" layer="27" ratio="10" rot="SR0"/>
 </element>
 </elements>
 <signals>
@@ -559,6 +583,13 @@ at 30/07/2012 17:45:58</description>
 <wire x1="4.826" y1="7.7" x2="4.826" y2="5.842" width="0.508" layer="1"/>
 </signal>
 </signals>
+<mfgpreviewcolors>
+<mfgpreviewcolor name="soldermaskcolor" color="0xC8008000"/>
+<mfgpreviewcolor name="silkscreencolor" color="0xFFFEFEFE"/>
+<mfgpreviewcolor name="backgroundcolor" color="0xFF282828"/>
+<mfgpreviewcolor name="coppercolor" color="0xFFFFBF00"/>
+<mfgpreviewcolor name="substratecolor" color="0xFF786E46"/>
+</mfgpreviewcolors>
 </board>
 </drawing>
 <compatibility>
