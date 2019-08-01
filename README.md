@@ -13,14 +13,11 @@ You can [watch it do an over the air update](.assets/ota-update.mp4) or [change 
 
 ![Lit](.assets/pcb-lit.jpg)
 
-
-
-
 ## Board
-![Board](.assets/brd.png);
+![Board](.assets/brd.png)
 
 ## Schematic
-![Board](.assets/sch.png);
+![Board](.assets/sch.png)
 
 ## License
 This project is licensed under the The TAPR Open Hardware License.
